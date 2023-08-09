@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iCodeThis - Challenge: Product Review</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <main>
+        <div class="review-card">
+            <button class="btn-close">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x"
+                    width="36" height="36"
+                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M18 6l-12 12"></path>
+                <path d="M6 6l12 12"></path>
+                </svg>
+            </button>
+
+            <h1>Overall rating</h1>
+
+            <div class="review-card__rating">
+                <div class="star-grp">
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                </div>
+                <span>Click to rate</span>
+            </div>
+
+            <div class="review-card__title">
+                <label for="review-title">Review title</label>
+                <input id="review-title" name="review-title" type="text" placeholder="Example: Easy to use">
+            </div>
+
+            <div class="review-card__recommend">
+                <h2>Would you recomment this product to a friend?</h2>
+                <input type="radio" name="recommend" id="recommend-yes">
+                <label for="recommend-yes">Yes</label>
+                <input type="radio" name="recommend" id="recommend-no">
+                <label for="recommend-no">No</label>
+            </div>
+
+            <div class="review-card__review">
+                <label for="review-text">Product review</label>
+                <textarea id="review-text" name="review-text" placeholder="Example: Since I bought this a month ago, it has been used a lot. What I like best/what is worst about this product is ...."></textarea>
+            </div>
+
+            <div class="review-card__contact">
+                <div class="review-card__contact__item">
+                    <label for="review-nickname">Nickname</label>
+                    <input id="review-nickname" name="review-nickname" type="text" placeholder="Example: bob27">
+                </div>
+
+                <div class="review-card__contact__item">
+                    <label for="review-mail">Email address (will not be published)</label>
+                    <input id="review-mail" name="review-mail" type="text" placeholder="Example: your@email.com">
+                </div>
+            </div>
+
+            <div class="review-card__policy">
+                <input type="radio" name="policy-accept" id="policy-accept">
+                <label for="policy-accept">I accept the <a href="#">terms and conditions</a></label>
+            </div>
+
+            <div class="review-card__text">
+                <p>You will be able to receive emails in connection with this review (eg if others comment on your
+                    review). All emails contain the option to unsubscribe. We can use the text and star rating from your
+                    review in other marketing.</p>
+            </div>
+
+            <button class="btn-send">Submit product review</button>
+        </div>
+    </main>
+</body>
+
+</html>

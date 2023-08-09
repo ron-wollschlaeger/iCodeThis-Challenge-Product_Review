@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+  --first-bg-color: hsl(245, 100%, 98%);
+  --second-bg-color: hsl(0, 91%, 91%);
+  --second-bg-color-shadow: hsla(0, 91%, 91%, 0.65);
+  --main-color: hsl(233, 48%, 14%);
+  --main-color-hover: hsl(233, 48%, 34%);
+  --second-color: hsl(226, 100%, 97%);
+  --white: hsl(0, 0%, 100%);
+  --light-gray: hsl(245, 100%, 98%);
+  --gray: hsl(232, 10%, 58%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 100%;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  line-height: 1.5;
+  background-color: var(--first-bg-color);
+}
+
+h1 {
+  font-family: "Merriweather", sans-serif;
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 2rem;
+}
+
+span { /* No Class needed, only one span in this project. */
+  font-size: .9rem;
+}
+
+a {
+  color: var(--main-color);
+  font-size: .9rem;
+  font-weight: 600;
+}
+
+a:hover {
+  color: var(--main-color-hover);
+}
+
+label {
+  font-size: .9rem;
+  font-weight: 600;
+}
+
+input {
+  padding: 1rem;
+  border-color: var(--second-color);
+  accent-color: var(--main-color);
+  border-radius: .5rem;
+  border-style: solid;
+  margin-top: .2rem;
+  margin-bottom: 2rem;
+}
+
+input[type=radio] {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: .3rem;
+}
+
+label[for=recommend-yes] {
+  margin-right: 1.5rem;
+}
+
+textarea {
+  padding: 1rem;
+  border-color: var(--second-color);
+  width: 100%;
+  resize: none;
+}
+
+main {
+  width: 910px;
+  height: 815px;
+  background-color: var(--second-bg-color);
+  border-radius: 4.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.review-card {
+  width: 660px;
+  color: var(--main-color);
+  background-color: var(--white);
+  border-radius: 2.5rem;
+  box-shadow: 0 0 5rem var(--second-bg-color-shadow);
+  position: relative;
+  padding: 4rem;
+}
+
+.btn-close {
+  display: inline-flex;
+  vertical-align: middle;
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  color: var(--gray);
+  background-color: var(--light-gray);
+  border: none;
+  border-radius: 50%;
+  padding: .6rem;
+
+transition: scale .1s;
+}
+
+.btn-close:hover {
+  cursor: pointer;
+  background-color: var(--second-bg-color);
+  scale: 1.1;
+}
+
+.star {
+	 position: relative;
+	 display: inline-block;
+	 width: 0;
+	 height: 0;
+	 margin-left: 0.9em;
+	 margin-right: 0.9em;
+	 margin-bottom: 1.2em;
+	 border-right: 0.3em solid transparent;
+	 border-bottom: 0.7em solid #fc0;
+	 border-left: 0.3em solid transparent;
+	 font-size: 20px;
+}
+
+ .star:before, .star:after {
+	 content: '';
+	 display: block;
+	 width: 0;
+	 height: 0;
+	 position: absolute;
+	 top: 0.6em;
+	 left: -1em;
+	 border-right: 1em solid transparent;
+	 border-bottom: 0.7em solid #fc0;
+	 border-left: 1em solid transparent;
+	 transform: rotate(-35deg);
+}
+
+ .star:after {
+	 transform: rotate(35deg);
+}
+ 
+.review-card__rating {
+  margin-top: .5rem;
+  margin-bottom: 2rem;
+}
+
+.review-card__title {
+  display: flex;
+  flex-direction: column;
+}
+
+.review-card__review {
+  margin-bottom: 1.5rem;
+}
+
+.review-card__contact {
+  display: flex;
+  gap: 1rem;
+}
+
+#review-mail {
+  width: 100%;
+}
+
+.btn-send {
+  background-color: var(--main-color);
+  color: var(--white);
+  border: none;
+  padding: 1rem;
+  border-radius: .2rem;
+}
+
+.btn-send:hover {
+  background-color: var(--main-color-hover);
+  cursor: pointer;
+}
